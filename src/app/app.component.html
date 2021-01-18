@@ -1,0 +1,117 @@
+<!-- <div>
+    <nav class="bg-dark navbar navbar-expand-xl navbar-dark container-fluid  ">
+        <div class="container mt-3">
+            <div class="mb-2">
+                <a class="navbar-brand"><img src="../../assets/braindesk.png" alt=""></a>
+            </div>
+            <div class=" ">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span>
+                        <svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-filter-right text-light"
+                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M14 10.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0 0 1h7a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0 0 1h11a.5.5 0 0 0 .5-.5z" />
+                        </svg>
+                    </span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav ">
+                    <li class="nav-item active">
+                        <a class="nav-link text-light" [routerLink]="['/DashBoardComponent']">HOME</a>
+                    </li>
+                    <li class="nav-item pl-5">
+                        <a class="nav-link text-light" [routerLink]="['/CategoryComponent']">Newcatagory</a>
+                    </li>
+                    <li class="nav-item pl-5">
+                        <a class="nav-link text-light" [routerLink]="['/ExpenceComponent']">Expense</a>
+                    </li>
+                    <li class="nav-item pl-5">
+                        <a class="nav-link text-light" [routerLink]="['/IncomeComponent']">Income</a>
+                    </li>
+                    <li class="nav-item px-5">
+                        <a class="nav-link text-light" [routerLink]="['/ResultlistComponent']">Report </a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class=" d-none d-xl-block">
+                <a role="button" class="btn btn-info nav-link btn-light ml-auto py-3 px-4 " [routerLink]="['/login']">
+                    LOGOUT
+                </a>
+            </div>
+        </div>
+    </nav>
+</div> -->
+
+<!-- 
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Navbar w/ text</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#"[routerLink]="['/DashBoardComponent']">HOME <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"[routerLink]="['/CategoryComponent']">Newcatagory/a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"[routerLink]="['/ExpenceComponent']">Expense</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"[routerLink]="['/IncomeComponent']">Income</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"[routerLink]="['/ResultlistComponent']">Report</a>
+                    </li>
+                    <button class="btn btn "></button>
+                  </ul>
+                  <span class="navbar-text">
+                    Navbar text with an inline element
+                  </span>
+                </div>
+              </nav> -->
+
+<div *ngIf="ebrain">
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <a class="navbar-brand ml-lg-5" href="#"><img src="../../assets/braindesk.png" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end mr-lg-5" id="navbarNav">
+      <ul class="navbar-nav p-3">
+        <li class="nav-item active">
+          <a class="nav-link text-light" href="#" [routerLink]="['/DashBoardComponent']">HOME <span
+              class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#" [routerLink]="['/CategoryComponent']">New-catagory</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#" [routerLink]="['/ExpenceComponent']">Expense</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#" [routerLink]="['/IncomeComponent']">Income</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#" [routerLink]="['/ResultlistComponent']">Report</a>
+        </li>
+        <!-- <li class="nav-item">
+                      <a class="nav-link disabled" href="#">Disabled</a>
+                    </li> -->
+        <button class="btn btn-primary" [routerLink]="['/login']">
+
+          Log out
+
+        </button>
+      </ul>
+    </div>
+  </nav>
+</div>
+<router-outlet></router-outlet>

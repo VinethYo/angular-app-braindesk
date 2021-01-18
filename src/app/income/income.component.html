@@ -1,0 +1,31 @@
+<div class="container mt-5">
+    <h2 class="text-center">Income</h2>
+    <button type="submit" class="btn btn-success yar " routerLink="/NewIncomeComponent">New Income</button>
+
+    <div class="col">
+        <table class="table mt-5" id="myTable">
+            <thead>
+                <tr>
+                    <th scope="col">S.No</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Category</th>
+
+                    <th scope="col">Date</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody id="bodyId">
+                <tr *ngFor="let data of incomeArr ;let i = index">
+                    <td>{{i+1}}</td>
+                    <td>{{data.Name}}</td>
+                    <td>{{data.Category}}</td>
+                    <td>{{data.Date}}</td>
+                    <td>{{data.Amount}}</td>
+                    <td><i class='bx bxs-edit' (click)="edit(data.id)"></i><i class='bx bxs-trash-alt ml-lg-4' (click)="delete(data.id)"></i></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="card card col-lg-6 col-md-12 col-sm-12 mt-4">
+    <form class="form" #registerForm="ngForm" (ngSubmit)="registerForm.valid && submit()" novalidate>
+      <h1 class="text-center mt-3">New Expence</h1>
+      <div class="form-group ml-3 mr-4 ">
+        <label for="Name">Name</label>
+        <input type="text" #Name="ngModel" required class="form-control" [(ngModel)]="expenseObj.Name" name="Name" id="Name" placeholder="Name">
+        <span class="text-danger" *ngIf="(Name.touched || registerForm.submitted) && Name.errors?.required">
+          Name is required
+        </span>
+      </div>
+      <div class="form-group ml-3 mr-4">
+        <label for="name">Category</label>
+        <select #Category="ngModel" required class="form-control" [(ngModel)]="expenseObj.Categoryy" aria-placeholder="Category" name="Category"
+          id="sel1">
+          <option value="">choose..</option>
+
+          <option value="Tea">Tea</option>
+          <option value="Internet">Internet</option>
+          <option value="EB">EB</option>
+          <option value="Rent">Rent</option>
+          <option value="Salery">Salery</option>
+          <option value="Manintance">Manintance</option>
+
+          <option value="">Others</option>
+
+        </select>
+        <span class="text-danger" *ngIf="(Category.touched || registerForm.submitted) && Category.errors?.required">
+          Category is required
+        </span>
+      </div>
+      <div class="form-group ml-3 mr-4 ">
+        <label for="Date">Date</label>
+        <input  #Date="ngModel" required  type="date" class="form-control" [(ngModel)]="expenseObj.Date" name="Date" id="Date" placeholder="Date">
+        <span class="text-danger" *ngIf="(Date.touched || registerForm.submitted) && Date.errors?.required">
+          Date is required
+        </span>
+      </div>
+      <div class="form-group ml-3 mr-4">
+        <label for="Amount">Amount</label>
+        <input type="number"  #Amount="ngModel" required  class="form-control" [(ngModel)]="expenseObj.Amountt" name="Amount" id="Amount"
+          placeholder="Amount">
+          <span class="text-danger" *ngIf="(Amount.touched || registerForm.submitted) && Amount.errors?.required">
+            Amount is required
+          </span>
+      </div>
+      <div class="form-row ml-3 mt-3 mb-3">
+        <button type="submit" class="btn btn-primary ml-1">Submit</button>
+        <button type="reset" class="btn btn-primary ml-3">Reset</button>
+
+      </div>
+    </form>
+  </div>
+  
+</div>

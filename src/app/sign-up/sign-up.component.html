@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="card col-lg-6 col-md-12 col-sm-12 mt-4">
+      <form class="form" #registerForm="ngForm" (ngSubmit)="registerForm.valid && submit()" novalidate>
+
+    <h1 class="text-center mt-3">Sign up</h1>
+    <div class="form-row col-12 mt-2">
+      <div class="form-group col-md-4 ">
+        <label for="firstName">Name</label>
+        <input type="text" #firstName="ngModel" required  class="form-control"  [(ngModel)]="signupObj.firstName" name="firstName" id="name" placeholder="First Name">
+        <span class="text-danger" *ngIf="(firstName.touched || registerForm.submitted) && firstName.errors?.required">
+         Name is required
+        </span>
+      </div>
+      <div class="form-group col-md-4 mt-2">
+        <label for="middleName"></label>
+        <input type="text" #middleName="ngModel" required  class="form-control" [(ngModel)]="signupObj.middleName" name="middleName" id="middleName" placeholder="Middle Name">
+        <span class="text-danger" *ngIf="(middleName.touched || registerForm.submitted) && middleName.errors?.required">
+          required
+        </span>
+      </div>
+      <div class="form-group col-md-4 mt-2">
+        <label for="lastName"></label>
+        <input type="text" #lastName="ngModel" required  class="form-control" [(ngModel)]="signupObj.lastName" name="lastName" id="lastName" placeholder="last Name">
+        <span class="text-danger" *ngIf="(lastName.touched || registerForm.submitted) && lastName.errors?.required">
+          required
+        </span>
+      </div>
+    </div>
+    <div class="form-group ml-3 mr-4 ">
+      <label for="phone">Phone</label>
+      <input type="number" #phone="ngModel" required  class="form-control" [(ngModel)]="signupObj.phone" name="phone" id="phone" placeholder="Mobile Number">
+      <span class="text-danger" *ngIf="(phone.touched || registerForm.submitted) && phone.errors?.required">
+       Mobile number is required
+      </span>
+    </div>
+    <div class="form-group ml-3 mr-4 ">
+      <label for="userName">User Name</label>
+      <input type="text" #userName="ngModel" required  class="form-control" [(ngModel)]="signupObj.username" name="username" id="userName" placeholder="User Name">
+      <span class="text-danger" *ngIf="(userName.touched || registerForm.submitted) && userName.errors?.required">
+        User Name is required
+      </span>
+    </div>
+    <div class="form-group ml-3 mr-4">
+        <label for="Password">Password</label>
+        <input type="password" #Password="ngModel" required  class="form-control" [(ngModel)]="signupObj.password" name="password" id="Password" placeholder="Password">
+        <span class="text-danger" *ngIf="(Password.touched || registerForm.submitted) && Password.errors?.required">
+          Password is required
+        </span>
+      </div>
+      <div class="form-row ml-3 mt-3 mb-1">
+    <button type="submit"  class="btn btn-primary ml-1">Sign in</button>
+    <button type="reset"  class="btn btn-primary ml-3">Reset</button>
+      </div>
+      </form>
+  </div>
+  </div>
